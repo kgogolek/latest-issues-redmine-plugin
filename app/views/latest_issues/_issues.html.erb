@@ -1,0 +1,12 @@
+<% if issues.any?%> 
+ <div class="box">
+  <h3>Latest Issues</h3>
+    <ul>
+        <% for issue in issues %>
+            <li>
+      	        <%= link_to h(truncate(issue.subject, :length => 60)), :controller => 'issues', :action => 'show', :id => issue %> (<%=h issue.status %>)
+            </li>
+	<% end %>
+    </ul>
+  </div>
+<% end %>
