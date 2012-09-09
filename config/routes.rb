@@ -2,5 +2,5 @@
 # See: http://guides.rubyonrails.org/routing.html
 #
 
-post 'latest-posts/change', :to => 'lp_setup#change'
-get 'latest-posts', :to => 'lp_setup#index'
+post 'latest-issues/change', :to => 'li_setup#change'
+get 'latest-issues', :to => 'li_setup#index'

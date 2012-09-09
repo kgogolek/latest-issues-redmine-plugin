@@ -1,14 +1,14 @@
 require 'redmine'
 
-require_dependency 'latest_posts/view_hook_listener'
+require_dependency 'latest_issues/view_hook_listener'
 
-Redmine::Plugin.register :latest_posts do
-  name 'Latest Posts plugin'
+Redmine::Plugin.register :latest_issues do
+  name 'Latest Issues plugin'
   author 'Kasia Gogolek'
-  description 'This plugin will display latest posts on the Redmine Homepage'
+  description 'This plugin will display latest issues on the Redmine Homepage'
   version '0.0.1'
-  url 'http://gogolek.co.uk/code/latest-posts/'
+  url 'http://redmine.gogolek.co.uk/projects/redmine-latest-issues'
   author_url 'http://www.gogolek.co.uk'
-  permission :lp_setup, { :lp_setup => [:index, :change] }, :public => true
-  menu :admin_menu, :latest_polls, {:controller => 'lp_setup', :action => 'index'}, :caption => 'Latest Posts'
+  permission :li_setup, { :li_setup => [:index, :change] }, :public => true
+  menu :admin_menu, :latest_issues, {:controller => 'li_setup', :action => 'index'}, :caption => 'Latest Issues'
 end
