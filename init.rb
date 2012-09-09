@@ -9,5 +9,6 @@ Redmine::Plugin.register :latest_posts do
   version '0.0.1'
   url 'http://gogolek.co.uk/code/latest-posts/'
   author_url 'http://www.gogolek.co.uk'
-  menu :admin_menu, :latest_polls, {:controller => 'LpSetup', :action => 'index'}, :caption => 'Latest Posts'
+  permission :lp_setup, { :lp_setup => [:index, :change] }, :public => true
+  menu :admin_menu, :latest_polls, {:controller => 'lp_setup', :action => 'index'}, :caption => 'Latest Posts'
 end
