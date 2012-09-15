@@ -16,7 +16,6 @@ module LatestIssues
         end
 
         def load_setup()
-            require  'plugins/latest_issues/app/models/latest_issues_setup.rb'
             setup = LatestIssuesSetup.find_by_id(1)
 
             if setup == nil
