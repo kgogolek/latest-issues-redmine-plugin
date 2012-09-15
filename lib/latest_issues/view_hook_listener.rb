@@ -16,8 +16,8 @@ module LatestIssues
         end
 
         def load_setup()
-            setup = LatestIssuesSetup.find_by_id(1)
-
+            
+	    setup = LatestIssuesSetup.find_by_id(1)
             if setup == nil
                 count = LatestIssuesSetup::DEFAULT_COUNT
                 side  = LatestIssuesSetup::DEFAULT_SIDE
