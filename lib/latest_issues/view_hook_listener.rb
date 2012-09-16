@@ -32,7 +32,7 @@ module LatestIssues
         def load_issues(count)
             html = '<div class="box" id="statuses">'
             html += '<h3 class="icon22 icon22-users">Latest Issues</h3><ul>'
-            issues  = Issue.find(:all, :limit => count, :order => "created_on DESC")
+            issues  = Issue.visible(User.current).find(:all, :limit => count, :order => "issues.created_on DESC")
             issues.each do |issue|
                 html += <<EOHTML
                   <li>
