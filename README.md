@@ -29,3 +29,5 @@ If you would like to send me an email, here you go: kasia@gogolek.co.uk
 
 If you would like to read my blog, please visit:
 http://www.gogolek.co.uk
+
+Or follow me on twitter http://twitter.com/morekasia
