@@ -1,7 +1,7 @@
 require 'redmine'
 
 require_dependency 'latest_issues/view_hook_listener'
-#require_dependency File.expand_path(File.join(File.dirname(__FILE__), 'app/controllers/li_setup_controller'))
+require_dependency File.expand_path(File.join(File.dirname(__FILE__), 'app/controllers/li_setup_controller'))
 
 Redmine::Plugin.register :latest_issues do
   name 'Latest Issues plugin'
