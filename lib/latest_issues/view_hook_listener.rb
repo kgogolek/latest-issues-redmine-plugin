@@ -21,8 +21,8 @@ class LatestIssuesViewHookListener < Redmine::Hook::ViewListener
 	    #setup = LatestIssuesSetup.find_by_id(1)
             setup = nil
 	    if setup == nil
-                count = 3 #LatestIssuesSetup::DEFAULT_COUNT
-                side  = 'left' #LatestIssuesSetup::DEFAULT_SIDE
+                count = LatestIssuesSetup::DEFAULT_COUNT
+                side  = LatestIssuesSetup::DEFAULT_SIDE
             else
                 count = setup.max_count
                 side  = setup.side

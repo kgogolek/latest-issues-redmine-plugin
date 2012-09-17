@@ -6,11 +6,13 @@ You can configure how many latest issues you want to see, and which side of the 
 
 Installation
 ============
-1. Follow the Redmine plugin installation steps at: www.redmine.org/wiki/redmine/Plugins Make sure the plugin is installed to Make sure you install the plugin to vendor/plugins/ for Redmine 1.x, for Redmine 2.x install it to plugins.
+1. Clone latest version of plugin from git, install it to plugins. git clone ssh://git@github.com/kgogolek/latest-issues-redmine-plugin.git latest_issues
 
-2. Run the plugin migrations +rake db:migrate_plugins+
+2. Make sure your plugin folder name is *latest_issues*
 
-3. Restart your Redmine web servers (e.g. mongrel, thin, mod_rails)
+3. Run the plugin migrations +rake db:migrate_plugins+
+
+4. Restart your Redmine web servers (e.g. mongrel, thin, mod_rails)
 
 Plugin should work now.
 
