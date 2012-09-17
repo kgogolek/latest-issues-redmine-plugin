@@ -1,5 +1,6 @@
-module LatestIssues
-    class ViewHookListener < Redmine::Hook::ViewListener
+class LatestIssuesViewHookListener < Redmine::Hook::ViewListener
+
+	require File.join(File.dirname(__FILE__), '../../app/models/latest_issues_setup')
 
         def view_welcome_index_left(context={})
             setup = load_setup()
@@ -17,10 +18,11 @@ module LatestIssues
 
         def load_setup()
             
-	    setup = LatestIssuesSetup.find_by_id(1)
-            if setup == nil
-                count = LatestIssuesSetup::DEFAULT_COUNT
-                side  = LatestIssuesSetup::DEFAULT_SIDE
+	    #setup = LatestIssuesSetup.find_by_id(1)
+            setup = nil
+	    if setup == nil
+                count = 3 #LatestIssuesSetup::DEFAULT_COUNT
+                side  = 'left' #LatestIssuesSetup::DEFAULT_SIDE
             else
                 count = setup.max_count
                 side  = setup.side
@@ -44,5 +46,4 @@ EOHTML
             return html
         end
     end
-end
 
