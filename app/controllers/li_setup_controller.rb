@@ -18,6 +18,6 @@ class LiSetupController < ApplicationController
       if setup.save
          flash[:notice] = 'Latest Issues setup saved.'
       end
-      redirect_to "/latest-issues" #:action => 'index'
+      redirect_to :action => 'index'
   end
 end
